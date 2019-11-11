@@ -84,7 +84,7 @@ namespace TravisCILab
         {
             Assert.AreEqual(0.5, Program.Divide("1", "2"));
             Assert.AreEqual(1.5, Program.Divide("3", "2"));
-            Assert.AreEqual(5/7, Program.Divide("5", "7"));
+            Assert.AreEqual(0.7142857142857143d, Program.Divide("5", "7"));
         }
 
         [Test]
@@ -96,7 +96,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Null()
+        public void Divide_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -108,7 +108,7 @@ namespace TravisCILab
         {
             Assert.AreEqual(1, Program.Power("1", "2"));
             Assert.AreEqual(9, Program.Power("3", "2"));
-            Assert.AreEqual(Math.Pow(5,7), Program.Power("5", "7"));
+            Assert.AreEqual(78125, Program.Power("5", "7"));
         }
 
         [Test]
